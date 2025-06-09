@@ -108,6 +108,21 @@ Each module is loosely coupled and can be **reused independently** or extended f
    * Use these as classification scores and evaluate with ROC.
 
 ---
+## Flowchart of the Pipeline
+graph TD
+    A[Load Peptide Sequences] --> B[Generate ESM-2 Embeddings]
+    B --> C1[Visualize AA Embeddings]
+    B --> C2[KMeans + tSNE Visualization]
+    B --> D[Train/Test Split]
+    D --> E1[Distance-Based Scoring]
+    D --> E2[Train Neural Network]
+    E1 --> F1[ROC + Boxplot (Baseline)]
+    E2 --> F2[ROC + Boxplot (NN)]
+    A --> G[Structure Files]
+    G --> H[Compute COM + pLDDT]
+    H --> I[ROC + Boxplot (Structure)]
+
+---
 
 ## Requirements
 
