@@ -108,38 +108,8 @@ Each module is loosely coupled and can be **reused independently** or extended f
    * Use these as classification scores and evaluate with ROC.
 
 ---
-## Flowchart of the Pipeline
-
-```mermaid
-graph TD
-    A[Load Peptide Sequences] --> B[Generate ESM-2 Embeddings]
-    B --> C1[Visualize AA Embeddings]
-    B --> C2[KMeans + tSNE Visualization]
-    B --> D[Train/Test Split]
-    D --> E1[Distance-Based Scoring]
-    D --> E2[Train Neural Network]
-    E1 --> F1[ROC + Boxplot (Baseline)]
-    E2 --> F2[ROC + Boxplot (NN)]
-    A --> G[Structure Files]
-    G --> H[Compute COM + pLDDT]
-    H --> I[ROC + Boxplot (Structure)]
-```
-
----
 
 ## Requirements
-
-Python packages used:
-
-* torch
-* fair-esm
-* numpy
-* scipy
-* pandas
-* matplotlib
-* biopython
-* tqdm
-* scikit-learn
 
 Install using:
 
@@ -162,8 +132,6 @@ pip install -r requirements.txt
 ```bash
 python ex4.py
 ```
-
-This will generate a variety of visual outputs in the `plots/` directory.
 
 
 
