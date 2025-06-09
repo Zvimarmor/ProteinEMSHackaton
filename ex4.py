@@ -38,7 +38,7 @@ def simple_score(p_train, n_train, p_test, n_test):
 if __name__ == '__main__':
 
     # TODO: play with these parameters
-    chosen_embedding_size = 1280  # ESM embedding dim (320-5120)
+    chosen_embedding_size = 2560  # ESM embedding dim (320-5120)
     chosen_embedding_layer = 33  # which transformer layer to take
     chosen_test_size = 0.25  # train/test split
 
@@ -99,9 +99,9 @@ if __name__ == '__main__':
     print("Training a neural network on the training set")
     # TODO: Select parameters for the network
     batch_size = 64
-    epochs = 50
+    epochs = 100
     lr = 1e-3
-    hidden_dim = 128
+    hidden_dim = 256
     dropout = 0.2
     # Prepare a Dataloader and create model
     net_dataloader = prepare_loader(positive_train, negative_train, batch_size=batch_size)
