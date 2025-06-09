@@ -109,6 +109,8 @@ Each module is loosely coupled and can be **reused independently** or extended f
 
 ---
 ## Flowchart of the Pipeline
+
+```mermaid
 graph TD
     A[Load Peptide Sequences] --> B[Generate ESM-2 Embeddings]
     B --> C1[Visualize AA Embeddings]
@@ -121,6 +123,7 @@ graph TD
     A --> G[Structure Files]
     G --> H[Compute COM + pLDDT]
     H --> I[ROC + Boxplot (Structure)]
+```
 
 ---
 
@@ -161,3 +164,8 @@ python ex4.py
 ```
 
 This will generate a variety of visual outputs in the `plots/` directory.
+
+
+
+
+
