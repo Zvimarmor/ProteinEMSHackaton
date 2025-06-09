@@ -1,0 +1,25 @@
+# Ignore virtual environments
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+
+# Ignore pip cache (optional)
+__pycache__/
+*.pyc
+*.pyo
+
+# Ignore Jupyter Notebook checkpoints (אם אתה משתמש בזה)
+.ipynb_checkpoints/
+
+# Ignore IDE files (PyCharm, VSCode, etc.)
+.idea/
+.vscode/
+
+# Ignore compiled shared objects
+*.so
+
+#Ignore large files
+DB/
+structures/
