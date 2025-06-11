@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.utils.data import DataLoader, TensorDataset
-import numpy as np
+import numpy as  np
 
 
 class SimpleDenseNet(nn.Module):

@@ -30,7 +30,7 @@ def simple_score(p_train, n_train, p_test, n_test):
     negative_mean_distances_neg = get_peptide_distances(n_test, n_train, reduce_func=np.mean)
 
     p_score = np.log1p(positive_mean_distances_neg) - np.log1p(positive_mean_distances_pos)
-    n_score = np.log1p(negative_mean_distances_neg) - np.log1p(negative_mean_distances_pos)  # TODO: fill this line
+    n_score = np.log1p(negative_mean_distances_neg) - np.log1p(negative_mean_distances_pos)
 
     return p_score, n_score
 
@@ -38,7 +38,7 @@ def simple_score(p_train, n_train, p_test, n_test):
 if __name__ == '__main__':
 
     # TODO: play with these parameters
-    chosen_embedding_size = 2560  # ESM embedding dim (320-5120)
+    chosen_embedding_size = 2560  # ESM embedding dim (320-5120) TODO: run it one time with 5120
     chosen_embedding_layer = 33  # which transformer layer to take
     chosen_test_size = 0.25  # train/test split
 
